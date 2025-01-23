@@ -44,6 +44,11 @@
         android:name="com.geeks.hw5_m4.views.WriteNoteFragment"
         android:label="fragment_write_note"
         tools:layout="@layout/fragment_write_note" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.geeks.hw5_m4.views.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
 
 
 </navigation>

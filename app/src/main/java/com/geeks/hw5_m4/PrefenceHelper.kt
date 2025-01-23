@@ -9,6 +9,10 @@ class PrefenceHelper {
         sharedPreferences = context.getSharedPreferences("shared", Context.MODE_PRIVATE)
     }
 
+    var board : Boolean
+        get( )= sharedPreferences.getBoolean("board", false)
+        set(value) = sharedPreferences.edit().putBoolean("board", value).apply()
+
     var text: String?
         get() = sharedPreferences.getString("text", "")
         set(value) = sharedPreferences.edit().putString("text", value).apply()

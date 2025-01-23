@@ -2,26 +2,87 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="#252525"
-    android:layout_height="match_parent">
-<TextView
-    android:id="@+id/tv_skip"
-    android:text="Пропустить"
-    android:layout_width="wrap_content"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:textColor="#D88B02"
-    android:textStyle="bold"
-    android:textSize="15sp"
-    android:layout_height="wrap_content"/>
+    android:layout_height="match_parent"
+    android:background="#252525">
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="14dp"
+        android:text="Пропустить"
+        android:textColor="#D88B02"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_skip" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
-        app:layout_constraintTop_toBottomOf="@id/tv_skip"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginHorizontal="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_for_lottie_corners"
+        android:backgroundTint="@color/white"
         android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_notes"
         app:lottie_autoPlay="true"
         app:lottie_loop="true" />
 
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lottie" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно."
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:text="Начать"
+        android:backgroundTint="#D88B02"
+        app:cornerRadius="12dp"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
